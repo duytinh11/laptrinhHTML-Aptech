@@ -1,0 +1,26 @@
+h1{
+    color:red;
+}
+p{
+    color:#0ed60e;
+    font-size:15px; /*co chu*/
+    line-height:1.5; /*khoang cach dong*font-size=khoang cach dong */
+    text-align: left; /*can trai phai giua*/
+    font-family: Arial, Helvetica, sans-serif; /* 3 font chu khac nhau*/
+    font-weight: 700; /*bold 700. nomal 400. thin 100. extra-thin 200...*/
+    text-decoration:underline; /*gach chu-gach chan*/
+    text-transform: uppercase; /*hoa hay thuong*/
+    width: 600px; /*do rong man hinh*/
+    font-style: italic; /*kieu chu*/
+    word-spacing: normal; /*khoang cach chu*/
+    background-color: aliceblue; /*mau nen*/
+    border-bottom: 1px solid yellow;
+    
+}
+a{
+    color:rgb(14, 214, 14)
+}
+body{
+    background-color: #0ed60e;
+    background-image: url("img");
+}
