@@ -1,0 +1,19 @@
+img{
+    max-width:100%;
+}
+.abc{
+    width: 500px;
+    float: left;
+    border: 1px solid red;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+
+
+
+.abd{
+    width: calc(100% - 300px); 
+
+}
