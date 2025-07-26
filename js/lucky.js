@@ -11,7 +11,7 @@ sodudoan = parseInt(sodudoan);
 if (sodudoan < 0 || sodudoan > 99) {
   alert("Số bạn nhập không hợp lệ! Vui lòng nhập số từ 0 đến 99.");
 } else {
-  const sotiendautu = prompt("Nhập số tiền bạn muốn đầu tư (đơn vị: VND):");
+  var sotiendautu = prompt("Nhập số tiền bạn muốn đầu tư (đơn vị: VND):");
   sotiendautu = parseFloat(sotiendautu);
 
   if (sotiendautu || sotiendautu) <= 0 {
