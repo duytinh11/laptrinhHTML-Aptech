@@ -4,7 +4,7 @@ luckyNumber = luckyNumber * 100;
 luckyNumber = parseInt(luckyNumber);
 
 
-const sodudoan = prompt("Nhập số bạn dự đoán (0 - 99):");
+var sodudoan = prompt("Nhập số bạn dự đoán (0 - 99):");
 sodudoan = parseInt(sodudoan);
 
 
