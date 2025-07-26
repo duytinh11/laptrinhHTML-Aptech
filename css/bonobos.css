@@ -1,0 +1,51 @@
+ body {
+      font-family: 'Helvetica', sans-serif;
+      background: #f6f6f6;
+      margin: 0;
+      padding: 0;
+    }
+.header{
+    text-align: center;
+    padding: 30px 0 20px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;;
+}
+.steps {
+      display: flex;
+      justify-content: center;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+    }
+.step {
+      text-align: center;
+      flex: 1;
+      position: relative;
+      font-size: 14px;
+      color: #888;
+}
+
+.step::before {
+      content: attr(data-step);
+      display: block;
+      margin: 0 auto 5px;
+      width: 26px;
+      height: 26px;
+      line-height: 26px;
+      border-radius: 50%;
+      background: #fff;
+      border: 2px solid #ccc;
+      color: #333;
+ }
+
+.step.active::before {
+      border-color: #000;
+      font-weight: bold;
+}
+
+.step.active {
+      color: #000;
+}

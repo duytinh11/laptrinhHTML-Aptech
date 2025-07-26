@@ -11,6 +11,7 @@
   </style>
     <title>Document</title>
     <link rel="stylesheet" href="css/layuot.css" />
+    <link rel="stylesheet" href="css/form.css" />
 </head>
 <body>
     <header class="section header">
@@ -22,7 +23,7 @@
     <nav class="section nav">
     <div class="container">
         <h2>Navigator</h2>
-    </div>
+        
     </nav>
 
     <main>
@@ -36,6 +37,80 @@
          <aside class="a-right">
                 <h2>Aside Right</h2>
             </aside>
+    </div>
+    <form method="get"  meaction="#">
+            <div class="form-group">
+            <label for="name">Full name</label>
+            <input type="text" name="full name" placeholder="enter your full name" required>
+            </div>
+            <div class="form-group">
+            <label for="email">email</label>
+            <input type="email" name="email" placeholder="enter your email"required>
+            </div>
+            <div class="form-group">
+            <label for="telephone">telephone</label>
+            <input type="tel" name="telephone" placeholder="enter your telephone number"required>
+            </div>
+            <div class="form-group">
+            <label for="name">Full name</label>
+            <input type="text" name="full name" placeholder="enter your full name">
+            </div>
+            <div class="form-group">
+            <label for="dob">date of birth</label>
+            <input type="date" name="dob"/>
+            </div>
+            <div class="form-group">
+            <label for="password">password</label>
+            <input type="password" name="password" placeholder="enter your password">
+            </div>
+            <div class="form-group">
+            <label for="gender">gender</label>
+            <input type="radio" name="gender" value="male"/> male
+            <input type="radio" name="gender" value="female"/> female
+            </div>
+             </div>
+            <div class="form-group">
+            <label for="weight">weight</label>
+            <input type="number" name="weight" placeholder="enter your weightin kg"/>
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="avatar">avatar</label>
+            <input type="file" name="avatar"/>
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="my_color">my_color</label>
+            <input type="color" name="my_color" />
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="my_time">my_time</label>
+            <input type="time" name="my_time" />
+            </div>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="terms" value="agree" id="terms">
+                <label for="terms">I agree to the terms and conditionns.</label>
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="city">city</label>
+            <select name="city">
+                <option value="hanoi">ha noi</option>
+                <option value="hanoi">TP HCM</option>
+            </select>
+            </div>
+             <div class="form-group">
+            <label for="address">Address</label>
+            <input type="adress" rows="5" placeholder="enter your address here" />
+            </div>
+              </div>
+            <div class="form-group">
+                <input type="checkbox" name="terms" value="agree" id="terms">
+                <label for="terms">I agree to the terms and conditionns.</label>
+            </div>
+        </form>
     </div>
     </main>
 
