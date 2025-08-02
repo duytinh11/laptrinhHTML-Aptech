@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="f1();" onmouseenter="f2();" onmouseleave="f3();" type="button">Button demo</button>
+    <hr/>
+    <!-- <input onkeypress="key1()" type="text" name="search" placeholder="enter key..."/>  -->
+    <!-- nham phim co tac dung bat ki -->
+    <!-- <input onkeydown="key2()" type="text" name="search" placeholder="enter key..."/> -->
+    <!-- an bat ki phim nao -->
+    <input id="ip" onkeyup="key2()" onkeydown="key3()" type="text" name="search" placeholder="enter key..."/>
+    <!-- nha bat ki phim nao -->
+     <!-- onkeyup lay gia tri moi nhat -->
+      <!-- onkeydown lay gia tri sau -->
+
+    <p id="text-search"></p>
+    <p id="text-search2"></p>
+
+
+    <select name="city" onchange="key4();">
+        <option value="HN">Ha Noi</option>
+        <option value="SG">TP HCM</option>
+    </select>
+
+    <script type="text/javascript" src="js/demo4.js"></script>
+
+</body>
+</html>

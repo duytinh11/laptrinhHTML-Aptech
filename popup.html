@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+    <link rel="stylesheet" href="css/popup.css">
+
+<body>
+
+  <div class="nutbam">
+    <button id="openPopup">Open Popup</button>
+  </div>
+
+ 
+  <div class="overlay" id="overlay">
+    <div class="popup">
+      <div class="popup-header">
+        <button class="back-btn">&#8592;</button>
+        <button class="close-btn" id="closeBtn">&times;</button>
+      </div>
+      <div class="popup-body">
+        <h2>Create a post</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium necessitatibus omnis, eaque ratione sunt commodi.</p>
+
+        <label for="campaign">Campaign Name</label>
+        <input type="text" id="campaign" placeholder="Ex. Get 50% off">
+
+        <div class="popup-actions">
+          <button class="continue-btn">Continue</button>
+          <button class="cancel-btn" id="cancelBtn">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const overlay = document.getElementById('overlay');
+    const openBtn = document.getElementById('openPopup');
+    const closeBtn = document.getElementById('closeBtn');
+    const cancelBtn = document.getElementById('cancelBtn');
+
+    openBtn.onclick = () => {
+      overlay.style.display = 'flex';
+    };
+
+    closeBtn.onclick = () => {
+      overlay.style.display = 'none';
+    };
+
+    cancelBtn.onclick = () => {
+      overlay.style.display = 'none';
+    };
+  </script>
+
+</body>
+</html>

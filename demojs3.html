@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head1">Demo js <Script></Script></h1>
+    <h2><span id="min">10</span>:<span id="sec">00</span></h2>
+
+     <script type="text/javascript">
+        setTimeout(function(){
+        var h = document.getElementById("head1");
+        // h.innerText = "day la noi dung da bi thay doi";
+        h.innerHTML = "<i> day la noi dung da bi in nghieng </i>";
+        h.style.color = "deeppink";
+        h.style.fontSize = "50px";
+        h.classList.add("demo"); //thay doi noi dung hay su dung trong mega menu
+        h.classList.remove("xyz");
+        }, 3000);
+
+    
+        var m = 10;
+        var s = 0;
+        var timer = setInterval(function(){
+            console.log(m+":"+s);
+        var min = document.getElementById("min");
+        var sec = document.getElementById("sec");
+        // min.innerHTML = m;
+        // sec.innerHTML = s;
+        min.innerText = m>=10?m:"0"+m; // toan tu 3 ngoi
+        sec.innerText = s>=10?s:"0"+s;
+
+            s--;
+            if(s<0){
+                m--;
+                s=59;
+            }
+            if(m<0){
+                clearInterval(timer);
+            }
+        }, 100);
+    
+     </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function luckynumber(){
+            var lk = parseInt(Math.random()*100); //1so ngau nhien 1->100
+            var n = prompt("nhap so ma ban du doan:");
+            n = parseInt(n);
+            //nguoi choi dat so tien muon dau tu
+            var m = prompt("so tien ban dat cuoc:");
+            m = parseInt(m);
+            if(n==lk){
+                m = m * 70;
+                alert("chuc mung ban da thang, so tien ban thu ve:" +m);
+            }else{
+                alert("chuc ban may man lan sau");
+            }
+        }
+        luckynumber();
+    </script>
+</body>
+</html>
