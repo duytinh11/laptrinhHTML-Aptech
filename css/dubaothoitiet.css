@@ -1,0 +1,45 @@
+
+    body {
+      background-color: #1e1e1e;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .weather {
+      background-color: #2b2b2b;
+      padding: 20px 30px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .weather-icon img {
+      width: 90px;
+      height: auto;
+    }
+
+    .temperature {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .temp-unit {
+      font-size: 20px;
+      margin-left: 4px;
+      color: #ccc;
+    }
+
+    .info {
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    .info p {
+      margin: 4px 0;
+    }
