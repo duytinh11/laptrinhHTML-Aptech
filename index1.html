@@ -1,62 +1,55 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>NetFilm - Trang chủ</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>NetFilm - Trang chủ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div>
-        <img src="" alt="">
-    </div>
-    <h1>NetFilm 🎬</h1>
-    <nav>
-      <ul>
-        <li><a href="index1.html">Trang chủ</a></li>
-        <li><a href="about.html">Giới thiệu</a></li>
-        <li><a href="movies.html">Phim</a></li>
-        <li><a href="favorites.html">Yêu thích</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="main-header">
+        <div class="logo">
+            <h1>NetFilm 🎬</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index1.html">Trang chủ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="movies.html">Phim</a></li>
+                <li><a href="favorites.html">Yêu thích</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <section class="search-bar">
-      <input type="text" placeholder="Nhập từ khóa...">
-    </section>
+    <main class="main-container">
+        <section class="search-bar">
+            <input type="text" placeholder="Tìm kiếm phim, diễn viên..." class="search-input">
+        </section>
 
-    <section class="categories">
-      <button>Hành động</button>
-      <button>Phiêu lưu</button>
-      <button>Lãng mạn</button>
-      <button>Tài liệu</button>
-      <button>Chiến tranh</button>
-      <button>Thể thao</button>
-      <button>Âm nhạc</button>
-      <button>Gia đình</button>
-    </section>
+        <section class="categories">
+            <button class="category-btn">Hành động</button>
+            <button class="category-btn">Phiêu lưu</button>
+            <button class="category-btn">Lãng mạn</button>
+            <button class="category-btn">Tài liệu</button>
+            <button class="category-btn">Chiến tranh</button>
+            <button class="category-btn">Thể thao</button>
+            <button class="category-btn">Âm nhạc</button>
+            <button class="category-btn">Gia đình</button>
+        </section>
 
-    <section class="movie-grid">
-      <div class="movie-card">
-        <img src="images/the-post.jpg" alt="The Post">
-        <h3>The Post</h3>
-        <p>Phim chính trị năm 2017 do Steven Spielberg đạo diễn.</p>
-      </div>
-      <div class="movie-card">
-        <img src="images/godfather.jpg" alt="The Godfather">
-        <h3>The Godfather</h3>
-      </div>
-      <div class="movie-card">
-        <img src="images/titanic.jpg" alt="Titanic">
-        <h3>Titanic</h3>
-      </div>
-      <!-- Thêm các phim khác -->
-    </section>
-  </main>
+        <section class="movie-grid">
+            <div class="movie-trailer-card">
+                <iframe src="https://www.youtube.com/embed/nrXlY6gzTTM" frameborder="0" allowfullscreen></iframe>
+                <div class="movie-trailer-info">
+                    <h3>The Post</h3>
+                    <p>Phim chính trị năm 2017 do Steven Spielberg đạo diễn, kể về câu chuyện của The Washington Post và việc công bố Hồ sơ Lầu Năm Góc.</p>
+                </div>
+            </div>
+            </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 NetFilm. All rights reserved.</p>
-  </footer>
+    <footer>
+        <p>&copy; 2025 NetFilm. All rights reserved.</p>
+    </footer>
 </body>
 </html>
