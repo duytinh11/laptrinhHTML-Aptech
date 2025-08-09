@@ -1,0 +1,92 @@
+:root{
+  --bg: #0d3b66;          /* nền tổng */
+  --card-bg: rgba(255,255,255,0.1);
+  --primary: #ffffff;
+  --muted: #d0d0d0;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html,body{
+  height:100%;
+  font-family: "Roboto Condensed", sans-serif;
+  background: var(--bg) url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?fit=crop&w=1950&q=80') no-repeat center center/cover;
+  color:var(--primary);
+}
+
+/* Căn giữa toàn bộ khung chính */
+.section.main{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:20px;
+}
+
+/* Ô nhập thành phố */
+#city{
+  width:320px;
+  max-width:90%;
+  padding:10px 14px;
+  border-radius:6px;
+  border:none;
+  background: rgba(255,255,255,0.15);
+  color:var(--primary);
+  outline:none;
+  font-size:16px;
+  margin-bottom:20px;
+}
+
+#city::placeholder{
+  color:rgba(255,255,255,0.7);
+}
+
+/* Khung chứa các thẻ dự báo */
+.forecast-container{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap:20px;
+  width:100%;
+  max-width:1200px;
+}
+
+/* Card thời tiết */
+.card{
+  background: var(--card-bg);
+  padding:15px;
+  border-radius:10px;
+  text-align:center;
+  backdrop-filter: blur(5px);
+  transition:transform 0.2s;
+}
+
+.card:hover{
+  transform:scale(1.05);
+}
+
+.date{
+  font-size:14px;
+  color:var(--muted);
+  margin-bottom:8px;
+}
+
+.temp{
+  font-size:24px;
+  font-weight:600;
+  margin-bottom:5px;
+}
+
+.card img{
+  width:60px;
+  height:60px;
+  margin:10px 0;
+}
+
+.desc{
+  font-size:16px;
+  color:var(--muted);
+}

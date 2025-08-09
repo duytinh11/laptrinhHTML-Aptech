@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bt7.css">
+</head>
+<body>
+    <main class="section main">
+        <input id="city" name="city" onkeyup="searchWeather(event)" placeholder="Enter your city"/>
+        <div id="forecast" class="forecast-container"></div>
+    </main>
+
+    <script>
+        function searchWeather(e){
+            if(e.keyCode === 13){
+                let city = document.getElementById("city").value.trim();
+                if(city === "") return;
+
+                const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=09a71427c59d38d6a34f89b47d75975c&units=metric`;
+
+                fetch(url)
+                .then(res => res.json())
+                .then(data => {
+                    let html = "";
+                    data.list.forEach(item => {
+                        let dateTime = item.dt_txt;
+                        let temp = item.main.temp.toFixed(2);
+                        let desc = item.weather[0].description;
+                        let icon = item.weather[0].icon;
+                        html += `
+                        <div class="card">
+                            <p class="date">${dateTime}</p>
+                            <p class="temp">${temp}°C</p>
+                            <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${desc}">
+                            <p class="desc">${desc}</p>
+                        </div>
+                        `;
+                    });
+                    document.getElementById("forecast").innerHTML = html;
+                })
+                .catch(() => alert("City not found!"));
+            }
+        }
+    </script>
+</body>
+</html>
