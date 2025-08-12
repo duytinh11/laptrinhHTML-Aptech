@@ -1,0 +1,16 @@
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+    }
+    .rating {
+      color: #ffc107;
+    }
+    .product-desc {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 0.9rem;
+      color: #555;
+    }
