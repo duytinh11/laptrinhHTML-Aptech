@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="btjson.css">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="mb-3">Products</h1>
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <p class="mb-0">Showing 1–20 of 20 results</p>
+            <select class="form-select w-auto">
+                <option>Default sorting</option>
+            </select>
+        </div>
+        <div class="row" id="product-grid"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        fetch('https://dummyjson.com/products?limit=20')
+            .then(response => response.json())
+            .then(data => {
+                const products = data.products;
+                const grid = document.getElementById('product-grid');
+
+                products.forEach(product => {
+                    const col = document.createElement('div');
+                    col.className = 'col-12 col-sm-6 col-md-3 mb-4';
+
+                    // Tính giá gốc nếu có discount
+                    let priceHtml = `$${product.price}`;
+                    if (product.discountPercentage > 0) {
+                        const originalPrice = Math.round(product.price / (1 - product.discountPercentage / 100));
+                        priceHtml = `<del>$${originalPrice}</del> $${product.price}`;
+                    }
+
+                    // Tạo sao đánh giá (làm tròn rating)
+                    const rating = Math.round(product.rating);
+                    let stars = '';
+                    for (let i = 1; i <= 5; i++) {
+                        stars += i <= rating ? '★' : '☆';
+                    }
+
+                    // Mô tả ngắn
+                    const shortDesc = product.description.slice(0, 80) + '...';
+
+                    col.innerHTML = `
+                        <div class="card">
+                            <img src="${product.thumbnail}" class="card-img-top" alt="${product.title}">
+                            <div class="card-body">
+                                <h5 class="card-title">${product.title}</h5>
+                                <div class="rating">${stars}</div>
+                                <p class="price">${priceHtml}</p>
+                                <p class="card-text">${shortDesc}</p>
+                                <button class="btn">Add to cart</button>
+                            </div>
+                        </div>
+                    `;
+                    grid.appendChild(col);
+                });
+            })
+            .catch(error => console.error('Error fetching products:', error));
+    </script>
+</body>
+</html>
