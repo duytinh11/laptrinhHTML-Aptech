@@ -168,12 +168,12 @@
 
 
     <script type="text/javascript">
-        function forecast(){
+        async function forecast(){
             const url = `https://api.openweathermap.org/data/2.5/forecast?q=hanoi&appid=09a71427c59d38d6a34f89b47d75975c&units=metric`;
-            fetch(url).then(rs=>rs.json())
-            .then(rs=>{
-                const list = rs.list;// array
-                list.map(e=>{
+            let rs = await fetch(url);
+            let data = await rs.json();
+            let list = data.list;
+                            list.map(e=>{
                     const item = `<div class="col-xl-3 col-md-6 mb-4">
                                     <div class="card item">
                                         <div class="card-body text-white">
@@ -185,8 +185,9 @@
                                     </div>
                                 </div>`;
                     document.getElementById("forecast").innerHTML += item;
-                })
-            });
+                }) catch (error){
+                    //khi loi thi se thuc hien trong day
+                }
         }
         forecast();
     </script>
